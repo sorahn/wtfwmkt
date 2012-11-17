@@ -6,7 +6,7 @@ body {
 }
 
 
-.keyboard {
+#keyboard {
   margin: 0 -4px;
 
   .kb-row {
@@ -45,6 +45,10 @@ body {
     height      : 26px;
     line-height : 26px;
     padding     : 0 4px;
+
+    &.small {
+      font-size: 65%;
+    }
   }
 
   .tab,
@@ -59,11 +63,7 @@ body {
 }
 
 .text-right {text-align: right;}
-
 .text-left {text-align: left;}
 
-.small {font-size: 65% !important;  line-height: 65% !important;
-  line-height: 12px;
-}
 
 #mti_wfs_colophon {display: none !important;}

@@ -1,13 +1,13 @@
 body {
   font-family: 'VAG Rounded W02 Light'; }
 
-.keyboard {
+#keyboard {
   margin: 0 -4px; }
-  .keyboard .kb-row {
+  #keyboard .kb-row {
     overflow: hidden;
     *zoom: 1;
     float: left; }
-  .keyboard .key {
+  #keyboard .key {
     overflow: hidden;
     *zoom: 1;
     -webkit-border-radius: 4px;
@@ -25,32 +25,35 @@ body {
     font-size: 22px;
     float: left;
     overflow: hidden; }
-    .uppercase .keyboard .key.letter {
+    .uppercase #keyboard .key.letter {
       text-transform: uppercase; }
-    .keyboard .key.invert {
+    #keyboard .key.invert {
       color: #ffffff;
       background-color: black; }
-  .keyboard .top,
-  .keyboard .bottom {
+  #keyboard .top,
+  #keyboard .bottom {
     font-size: 18px;
     height: 26px;
     line-height: 26px;
     padding: 0 4px; }
-  .keyboard .tab,
-  .keyboard .delete,
-  .keyboard .control {
+    #keyboard .top.small,
+    #keyboard .bottom.small {
+      font-size: 65%; }
+  #keyboard .tab,
+  #keyboard .delete,
+  #keyboard .control {
     width: 89px; }
-  .keyboard .caps-lock {
+  #keyboard .caps-lock {
     width: 100px; }
-  .keyboard .return {
+  #keyboard .return {
     width: 109px; }
-  .keyboard .shift {
+  #keyboard .shift {
     width: 137px; }
-  .keyboard .option {
+  #keyboard .option {
     width: 70px; }
-  .keyboard .command {
+  #keyboard .command {
     width: 88px; }
-  .keyboard .space {
+  #keyboard .space {
     width: 380px; }
 
 .text-right {
@@ -58,11 +61,6 @@ body {
 
 .text-left {
   text-align: left; }
-
-.small {
-  font-size: 65% !important;
-  line-height: 65% !important;
-  line-height: 12px; }
 
 #mti_wfs_colophon {
   display: none !important; }
