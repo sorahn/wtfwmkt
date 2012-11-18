@@ -1,29 +1,196 @@
 {
   "rows":
   [
-    ""
+    {
+      "_comment" : "`1234567890-=",
+      "keys"     :
+      [
+        { "keyCode" : "192", "default" : "`", "shift" : "~", "alt" : "`", "super" : "`" },
+        { "keyCode" : "49",  "default" : "1", "shift" : "!", "alt" : "¡", "super" : "⁄" },
+        { "keyCode" : "50",  "default" : "2", "shift" : "@", "alt" : "™", "super" : "€" },
+        { "keyCode" : "51",  "default" : "3", "shift" : "#", "alt" : "£", "super" : "‹" },
+        { "keyCode" : "52",  "default" : "4", "shift" : "$", "alt" : "¢", "super" : "›" },
+        { "keyCode" : "53",  "default" : "5", "shift" : "%", "alt" : "∞", "super" : "ﬁ" },
+        { "keyCode" : "54",  "default" : "6", "shift" : "^", "alt" : "§", "super" : "ﬂ" },
+        { "keyCode" : "55",  "default" : "7", "shift" : "&", "alt" : "¶", "super" : "‡" },
+        { "keyCode" : "56",  "default" : "8", "shift" : "*", "alt" : "•", "super" : "°" },
+        { "keyCode" : "57",  "default" : "9", "shift" : "(", "alt" : "ª", "super" : "·" },
+        { "keyCode" : "48",  "default" : "0", "shift" : ")", "alt" : "º", "super" : "‚" },
+        { "keyCode" : "189", "default" : "-", "shift" : "_", "alt" : "–", "super" : "—" },
+        { "keyCode" : "187", "default" : "=", "shift" : "+", "alt" : "≠", "super" : "±" },
+        { "keyCode" : "8",
+          "classes" : "delete",
+          "halves"  :
+          [
+            { "classes" : "top",                     "text" : " "      },
+            { "classes" : "bottom small text-right", "text" : "delete" }
+          ]
+        }
+      ]
+    },
+
+    {
+      "_comment" : "qwrtyuiop[]\\",
+      "keys"     :
+      [
+        {
+          "keyCode" : "9",
+          "classes" : "tab",
+          "halves" :
+          [
+            {"classes" : "top",                    "text": " " },
+            {"classes" : "bottom small text-left", "text" : "tab" }
+          ]
+        },
+        { "keyCode" : "81",  "default" : "q",  "shift" : "Q", "alt" : "œ", "super" : "Œ" },
+        { "keyCode" : "87",  "default" : "w",  "shift" : "W", "alt" : "∑", "super" : "„" },
+        { "keyCode" : "69",  "default" : "e",  "shift" : "E", "alt" : "´", "super" : "´" },
+        { "keyCode" : "82",  "default" : "r",  "shift" : "R", "alt" : "®", "super" : "‰" },
+        { "keyCode" : "84",  "default" : "t",  "shift" : "T", "alt" : "†", "super" : "ˇ" },
+        { "keyCode" : "89",  "default" : "y",  "shift" : "Y", "alt" : "¥", "super" : "Á" },
+        { "keyCode" : "85",  "default" : "u",  "shift" : "U", "alt" : "¨", "super" : "¨" },
+        { "keyCode" : "73",  "default" : "i",  "shift" : "I", "alt" : "ˆ", "super" : "ˆ" },
+        { "keyCode" : "79",  "default" : "o",  "shift" : "O", "alt" : "ø", "super" : "Ø" },
+        { "keyCode" : "80",  "default" : "p",  "shift" : "P", "alt" : "π", "super" : "∏" },
+        { "keyCode" : "219", "default" : "[",  "shift" : "{", "alt" : "“", "super" : "”" },
+        { "keyCode" : "221", "default" : "]",  "shift" : "}", "alt" : "‘", "super" : "’" },
+        { "keyCode" : "220", "default" : "\\", "shift" : "|", "alt" : "«", "super" : "»" }
+      ]
+    },
+
+    {
+      "_comment" : "asdfghjkl;'",
+      "keys"     :
+      [
+        {
+          "classes" : "caps-lock",
+          "halves"  :
+          [
+            {"classes" : "top small text-left",    "text" : "°"         },
+            {"classes" : "bottom small text-left", "text" : "caps-lock" }
+          ]
+        },
+        { "keyCode" : "65",  "default" : "a",  "shift" : "A",  "alt" : "å", "super" : "Å" },
+        { "keyCode" : "83",  "default" : "s",  "shift" : "S",  "alt" : "ß", "super" : "Í" },
+        { "keyCode" : "68",  "default" : "d",  "shift" : "D",  "alt" : "∂", "super" : "Î" },
+        { "keyCode" : "70",  "default" : "f",  "shift" : "F",  "alt" : "ƒ", "super" : "Ï", "classes" : "home" },
+        { "keyCode" : "71",  "default" : "g",  "shift" : "G",  "alt" : "©", "super" : "˝" },
+        { "keyCode" : "72",  "default" : "h",  "shift" : "H",  "alt" : "˙", "super" : "Ó" },
+        { "keyCode" : "74",  "default" : "j",  "shift" : "J",  "alt" : "∆", "super" : "Ô", "classes" : "home" },
+        { "keyCode" : "75",  "default" : "k",  "shift" : "K",  "alt" : "˚", "super" : "" },
+        { "keyCode" : "76",  "default" : "l",  "shift" : "L",  "alt" : "¬", "super" : "Ò" },
+        { "keyCode" : "186", "default" : ";",  "shift" : ":",  "alt" : "…", "super" : "Ú" },
+        { "keyCode" : "222", "default" : "'",  "shift" : "\"", "alt" : "æ", "super" : "Æ" },
+        {
+          "keyCode" : "13",
+          "classes" : "return",
+          "halves"  :
+          [
+            {"classes" : "top small text-right",    "text" : "enter"  },
+            {"classes" : "bottom small text-right", "text" : "return" }
+          ]
+        }
+      ]
+    },
+
+    {
+      "_comment" : "zxcvbnm,./",
+      "keys"     :
+      [
+        {
+          "keyCode" : "16",
+          "classes" : "shift",
+          "halves"  :
+          [
+            {"classes" : "top",                    "text" : " "     },
+            {"classes" : "bottom small text-left", "text" : "shift" }
+          ]
+        },
+        { "keyCode" : "90",  "default" : "z",  "shift" : "Z",  "alt" : "Ω", "super" : "¸" },
+        { "keyCode" : "88",  "default" : "x",  "shift" : "X",  "alt" : "≈", "super" : "˛" },
+        { "keyCode" : "67",  "default" : "c",  "shift" : "C",  "alt" : "ç", "super" : "Ç" },
+        { "keyCode" : "86",  "default" : "v",  "shift" : "V",  "alt" : "√", "super" : "◊" },
+        { "keyCode" : "66",  "default" : "b",  "shift" : "B",  "alt" : "∫", "super" : "ı" },
+        { "keyCode" : "78",  "default" : "n",  "shift" : "N",  "alt" : "˜", "super" : "˜" },
+        { "keyCode" : "77",  "default" : "m",  "shift" : "M",  "alt" : "µ", "super" : "Â" },
+        { "keyCode" : "188", "default" : ",",  "shift" : "<",  "alt" : "≤", "super" : "¯" },
+        { "keyCode" : "190", "default" : ".",  "shift" : ">",  "alt" : "≥", "super" : "˘" },
+        { "keyCode" : "191", "default" : "/",  "shift" : "?",  "alt" : "÷", "super" : "¿" },
+        {
+          "keyCode" : "16",
+          "classes" : "shift",
+          "halves"  :
+          [
+            {"classes" : "top",                     "text" : " "     },
+            {"classes" : "bottom small text-right", "text" : "shift" }
+          ]
+        }
+      ]
+    },
+
+    {
+      "_comment" : "ctrl alt cmd",
+      "keys"     :
+      [
+        {
+          "keyCode" : "17",
+          "classes" : "control",
+          "halves"  :
+          [
+            {"classes" : "top",                    "text" : " "       },
+            {"classes" : "bottom small text-left", "text" : "control" }
+          ]
+        },
+        {
+          "keyCode" : "18",
+          "classes" : "option",
+          "halves"  :
+          [
+            {"classes" : "top small text-left",    "text" : "alt"    },
+            {"classes" : "bottom small text-left", "text" : "option" }
+          ]
+        },
+        {
+          "keyCode" : "91",
+          "classes" : "command",
+          "halves"  :
+          [
+            {"classes" : "top small text-right",    "text" : "⌘"       },
+            {"classes" : "bottom small text-right", "text" : "command" }
+          ]
+        },
+        {
+          "keyCode" : "32",
+          "classes" : "space"
+        },
+        {
+          "keyCode" : "93",
+          "classes" : "command",
+          "halves"  :
+          [
+            {"classes" : "top small text-left",    "text" : "⌘"       },
+            {"classes" : "bottom small text-left", "text" : "command" }
+          ]
+        },
+        {
+          "keyCode" : "18",
+          "classes" : "option",
+          "halves"  :
+          [
+            {"classes" : "top small text-right",    "text" : "alt"    },
+            {"classes" : "bottom small text-right", "text" : "option" }
+          ]
+        },
+        {
+          "keyCode" : "17",
+          "classes" : "control",
+          "halves"  :
+          [
+            {"classes" : "top",                     "text" : " "       },
+            {"classes" : "bottom small text-right", "text" : "control" }
+          ]
+        }
+      ]
+    }
   ]
 }
-
-
-
-
-`1234567890-=
-~!@#$%^&*()_+
-`¡™£¢∞§¶•ªº–≠
-`⁄€‹›ﬁﬂ‡°·‚—±
-
-qwertyuiop[]\
-QWERTYUIOP{}|
-œ∑´®†¥¨ˆøπ“‘«
-Œ„´‰ˇÁ¨ˆØ∏”’»
-
-asdfghjkl;'
-ASDFGHJKL:"
-åß∂ƒ©˙∆˚¬…æ
-ÅÍÎÏ˝ÓÔÒÚÆ
-
-zxcvbnm,./
-ZXCVBNM<>?
-Ω≈ç√∫˜µ≤≥÷
-¸˛Ç◊ı˜Â¯˘¿

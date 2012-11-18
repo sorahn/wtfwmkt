@@ -1,13 +1,10 @@
 @import "compass";
 @import "compass/css3";
 
-body {
-  font-family:'VAG Rounded W02 Light';
-}
-
 
 #keyboard {
-  margin: 0 -4px;
+  margin: 20px -4px;
+  font-family:'VAG Rounded W02 Light';
 
   .kb-row {
     @include clearfix;
@@ -18,24 +15,24 @@ body {
     @include clearfix;
     @include border-radius(4px);
 
+    display        : inline-block;
+    float          : left;
+    overflow       : hidden;
     margin         : 4px;
     width          : 55px;
     height         : 52px;
-    line-height    : 56px;
     border         : 1px solid black;
     text-align     : center;
-    display        : inline-block;
     font-size      : 22px;
-    float          : left;
-    overflow       : hidden;
+    line-height    : 56px;
 
     .uppercase &.letter {
       text-transform: uppercase;
     }
 
     &.invert {
+      background-color: #000000;
       color: #ffffff;
-      background-color: #000000
     }
   }
 
@@ -53,17 +50,16 @@ body {
 
   .tab,
   .delete,
-  .control    { width : 89px; }
+  .control    { width : 89px;  }
   .caps-lock  { width : 100px; }
   .return     { width : 109px; }
   .shift      { width : 137px; }
-  .option     { width : 70px; }
-  .command    { width : 88px; }
+  .option     { width : 70px;  }
+  .command    { width : 88px;  }
   .space      { width : 380px; }
 }
 
-.text-right {text-align: right;}
-.text-left {text-align: left;}
+.text-right { text-align : right; }
+.text-left  { text-align : left;  }
 
-
-#mti_wfs_colophon {display: none !important;}
+#mti_wfs_colophon { display: none !important; }

@@ -7,161 +7,170 @@
   <link href="style.css" rel="stylesheet">
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-  <script src="http://fast.fonts.com/jsapi/2fd42bbf-5c85-4b3b-b814-d3bd61b331f3.js" type="text/javascript"></script>
+  <script src="http://fast.fonts.com/jsapi/2fd42bbf-5c85-4b3b-b814-d3bd61b331f3.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.0.rc.1/handlebars.js"></script>
+
+  <script id="row-template" type="text/x-handlebars-template">
+    {{#each rows}}
+      <div class="kb-row">
+        {{#each keys}}
+          <div class="key {{classes}}"
+            {{#if keyCode}} data-keycode="{{keyCode}}"  {{/if}}
+            {{#if default}} data-default="{{default}}"  {{/if}}
+            {{#if shift}}   data-shift="{{shift}}"      {{/if}}
+            {{#if alt}}     data-alt="{{alt}}"          {{/if}}
+            {{#if super}}   data-super="{{super}}"      {{/if}}
+          >
+
+            {{#if halves}}
+              {{#each halves}}
+                <div class="{{classes}}">
+                  {{text}}
+                </div>
+              {{/each}}
+            {{/if}}
+          </div>
+        {{/each}}
+      </div>
+    {{/each}}
+  </script>
+
 </head>
 <body>
-  <header class="container">
-    <div class="row">
-      <div class="span12">
-        <h1>What The Fuck Will My Keyboard Type</h1>
+  <header class="navbar navbar-static-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <a class="brand">What The Fuck Will My Keyboard Type</a>
       </div>
     </div>
   </header><!-- /header -->
 
   <section class="container">
-    <div id="keyboard">
-      <div class="kb-row">
-        <div id="key-192" class="key">`</div>
-        <div id="key-49"  class="key">1</div>
-        <div id="key-50"  class="key">2</div>
-        <div id="key-51"  class="key">3</div>
-        <div id="key-52"  class="key">4</div>
-        <div id="key-53"  class="key">5</div>
-        <div id="key-54"  class="key">6</div>
-        <div id="key-55"  class="key">7</div>
-        <div id="key-56"  class="key">8</div>
-        <div id="key-57"  class="key">9</div>
-        <div id="key-48"  class="key">0</div>
-        <div id="key-189" class="key">-</div>
-        <div id="key-187" class="key">=</div>
-        <div id="key-8"   class="key split delete">
-          <div class="top">&nbsp;</div>
-          <div class="bottom text-right small">delete</div>
-        </div>
-      </div><!-- .kb-row -->
-
-      <div class="kb-row">
-        <div id="key-9"class="key split tab">
-          <div class="top">&nbsp;</div>
-          <div class="bottom text-left"><small>tab</small></div>
-        </div>
-        <div id="key-81"  class="key letter">q</div>
-        <div id="key-87"  class="key letter">w</div>
-        <div id="key-69"  class="key letter">e</div>
-        <div id="key-82"  class="key letter">r</div>
-        <div id="key-84"  class="key letter">t</div>
-        <div id="key-89"  class="key letter">y</div>
-        <div id="key-85"  class="key letter">u</div>
-        <div id="key-73"  class="key letter">i</div>
-        <div id="key-79"  class="key letter">o</div>
-        <div id="key-80"  class="key letter">p</div>
-        <div id="key-219" class="key">[</div>
-        <div id="key-221" class="key">]</div>
-        <div id="key-220" class="key">\</div>
-      </div><!-- .kb-row -->
-
-      <div class="kb-row">
-        <div class="key split caps-lock">
-          <div class="top text-left">°</div>
-          <div class="bottom text-left"><small>caps lock</small></div>
-        </div>
-        <div id="key-65"  class="key letter">a</div>
-        <div id="key-83"  class="key letter">s</div>
-        <div id="key-68"  class="key letter">d</div>
-        <div id="key-70"  class="key letter">f</div>
-        <div id="key-71"  class="key letter">g</div>
-        <div id="key-72"  class="key letter">h</div>
-        <div id="key-74"  class="key letter">j</div>
-        <div id="key-75"  class="key letter">k</div>
-        <div id="key-76"  class="key letter">l</div>
-        <div id="key-186" class="key">;</div>
-        <div id="key-222" class="key">'</div>
-        <div id="key-13"  class="key split return">
-          <div class="top text-right"><small class="small">enter</small></div>
-          <div class="bottom text-right"><small>return</small></div>
-        </div>
-      </div><!-- .kb-row -->
-
-      <div class="kb-row">
-        <div id="key-left-16" class="key split shift">
-          <div class="top">&nbsp;</div>
-          <div class="bottom text-left"><small>shift</small></div>
-        </div>
-        <div id="key-90" class="key letter">z</div>
-        <div id="key-88" class="key letter">x</div>
-        <div id="key-67" class="key letter">c</div>
-        <div id="key-86" class="key letter">v</div>
-        <div id="key-66" class="key letter">b</div>
-        <div id="key-78" class="key letter">n</div>
-        <div id="key-77" class="key letter">m</div>
-        <div id="key-188" class="key">,</div>
-        <div id="key-190" class="key">.</div>
-        <div id="key-191" class="key">/</div>
-        <div id="key-right-16" class="key split shift">
-          <div class="top">&nbsp;</div>
-          <div class="bottom text-right"><small>shift</small></div>
-        </div>
-      </div><!-- .kb-row -->
-      <div class="kb-row">
-        <div id="key-left-17" class="key control">
-          <div class="top">&nbsp;</div>
-          <div class="bottom text-left"><small>control</small></div>
-        </div>
-        <div id="key-left-18" class="key option">
-          <div class="top text-left"><small class="small">alt</small></div>
-          <div class="bottom text-left"><small>option</small></div>
-        </div>
-        <div id="key-91" class="key command">
-          <div class="top text-right"><small>⌘</small></div>
-          <div class="bottom text-right"><small>command</small></div>
-        </div>
-        <div class="key space"></div>
-        <div id="key-93" class="key command">
-          <div class="top text-left"><small>⌘</small></div>
-          <div class="bottom text-left"><small>command</small></div>
-        </div>
-        <div id="key-right-18" class="key option">
-          <div class="top text-right"><small class="small">alt</small></div>
-          <div class="bottom text-right"><small>option</small></div>
-        </div>
-        <div id="key-right-17" class="key control">
-          <div class="top">&nbsp;</div>
-          <div class="bottom text-right"><small>control</small></div>
-        </div>
-      </div><!-- .kb-row -->
-
-    </div><!-- .keyboard -->
+    <div id="keyboard"></div>
   </section>
+
+  <div class="container">
+    <hr>
+
+    <div class="row">
+      <div class="span12">
+        <p>Use the <code>alt</code> and <code>shift</code> keys to see what 
+          other characters you can type in OSX.</p>
+      </div>
+    </div>
+  </div>
 
   <script>
     $(function () {
+      var keys            = {};
+      var isShiftDown     = false;
+      var isAltDown       = false;
+      var keysWithShift   = {};
+      var keysWithAlt     = {};
+      var keysWithSuper   = {};
+      var keysWithDefault = {};
+
+
+      $.getJSON('/keys.json', renderKeys)
+        .error( function(one, two, three) {
+          console.error(one, two, three);
+        });
 
       $(window).on({
         keydown : onKeyDown,
         keyup   : onKeyUp
       });
 
+
+      function renderKeys(keys) {
+        var rowHtml = $('#row-template').html(),
+            rowTemplate = Handlebars.compile( rowHtml ),
+            html = rowTemplate(keys);
+
+        $('#keyboard').prepend( html );
+
+        keysWithShift   = $('.key[data-shift]');
+        keysWithAlt     = $('.key[data-alt]');
+        keysWithSuper   = $('.key[data-super]');
+        keysWithDefault = $('.key[data-default]');
+
+        keysWithDefault.each( showDefault );
+      }
+
       function onKeyDown(e) {
         e.preventDefault();
 
+        switch( e.keyCode ) {
+          case 16:
+            if( isAltDown ) {
+              keysWithSuper.each( showSuper );
+            } else {
+              keysWithShift.each( showShift );
+            }
 
-        if( e.keyCode == 16) {
-          $('body').addClass('uppercase');
+            isShiftDown = true;
+            break;
+
+          case 18:
+            if( isShiftDown ) {
+              keysWithSuper.each( showSuper );
+            } else {
+              keysWithAlt.each( showAlt );
+            }
+
+            isAltDown = true;
+            break;
         }
 
-        $('#key-'+ e.keyCode).addClass('invert');
-        $('#key-left-'+ e.keyCode).addClass('invert');
-        $('#key-right-'+ e.keyCode).addClass('invert');
-        console.log(e.keyCode);
+        $('.key[data-keycode=' + e.keyCode + ']').addClass('invert');
+        console.log( e.keyCode );
+      }
+
+      function showSuper() {
+        changeKey(this, 'super');
+      }
+
+      function showShift() {
+        changeKey(this, 'shift');
+      }
+
+      function showAlt() {
+        changeKey(this, 'alt');
+      }
+
+      function showDefault() {
+        changeKey(this, 'default');
+      }
+
+      function changeKey(key, content) {
+        var key = $(key);
+        key.html( key.data(content) );
       }
 
       function onKeyUp(e) {
-        if( e.keyCode == 16) {
-          $('body').removeClass('uppercase');
+        switch( e.keyCode ) {
+          case 16:
+            if( isAltDown ) {
+              keysWithAlt.each( showAlt );
+            } else {
+              keysWithDefault.each( showDefault );
+            }
+
+            isShiftDown = false;
+            break;
+
+          case 18:
+            if( isShiftDown ) {
+              keysWithShift.each( showShift );
+            } else {
+              keysWithDefault.each( showDefault );
+            }
+
+            isAltDown = false;
+            break;
         }
-        $('#key-'+ e.keyCode).removeClass('invert');
-        $('#key-left-'+ e.keyCode).removeClass('invert');
-        $('#key-right-'+ e.keyCode).removeClass('invert');
+
+        $('.key[data-keycode=' + e.keyCode + ']').removeClass('invert');
       }
 
     });
